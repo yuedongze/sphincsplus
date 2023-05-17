@@ -732,7 +732,7 @@ void sha3_512_inc_finalize(uint8_t *output, uint64_t *s_inc) {
 
     keccak_squeezeblocks(t, 1, s_inc, SHA3_512_RATE);
 
-    for (size_t i = 0; i < 32; i++) {
+    for (size_t i = 0; i < 64; i++) {
         output[i] = t[i];
     }
 }
